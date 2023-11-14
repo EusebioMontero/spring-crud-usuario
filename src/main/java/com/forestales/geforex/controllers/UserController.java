@@ -1,20 +1,17 @@
-package com.emc.springcrudusuario.controllers;
+package com.forestales.geforex.controllers;
 
-import com.emc.springcrudusuario.dto.UserDetailDto;
-import com.emc.springcrudusuario.dto.UserDto;
-import com.emc.springcrudusuario.entities.UserEntity;
-import com.emc.springcrudusuario.service.UserService;
-import io.jsonwebtoken.Header;
+import com.forestales.geforex.dto.UserDetailDto;
+import com.forestales.geforex.dto.UserDto;
+import com.forestales.geforex.entities.UserEntity;
+import com.forestales.geforex.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.validation.Valid;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
@@ -29,7 +26,8 @@ public class UserController {
     PasswordEncoder passwordEncoder;
 
     @GetMapping("/user")
-    public ResponseEntity<UserDto> userByLogin(@RequestBody UserDto user) {
+    public ResponseEntity<UserDto> userByLogin(@RequestBody UserDto user, @RequestHeader String Authorization) {
+
         try {
             UserEntity userEntity = userService.getByUserLogin(user.getLogin()).orElseThrow(NoSuchElementException::new);
             UserDto userDto = new UserDto(userEntity.getId(), userEntity.getUsuLogin(), userEntity.getUsuNombre(), userEntity.getUsuMail(),userEntity.getUsuAvatar(), userEntity.getAuthorities());

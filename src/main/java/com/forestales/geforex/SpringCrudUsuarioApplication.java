@@ -1,16 +1,13 @@
-package com.emc.springcrudusuario;
+package com.forestales.geforex;
 
-import com.emc.springcrudusuario.dto.UserDto;
-import com.emc.springcrudusuario.entities.UserEntity;
-import com.emc.springcrudusuario.service.UserService;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
-import java.time.LocalDate;
 
 @SpringBootApplication
-public class SpringCrudUsuarioApplication {
+public class SpringCrudUsuarioApplication  {
+
 
     public static void main(String[] args) {
 		SpringApplication.run(SpringCrudUsuarioApplication.class, args);
@@ -32,6 +29,7 @@ public class SpringCrudUsuarioApplication {
 //        System.out.println(userService.existByUserName("kk"));
 //        System.out.println(userService.existByUserName("Eusebio"));
     }
+
 
 }
 

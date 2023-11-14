@@ -1,6 +1,6 @@
-package com.emc.springcrudusuario.repositories;
+package com.forestales.geforex.repositories;
 
-import com.emc.springcrudusuario.entities.UserEntity;
+import com.forestales.geforex.entities.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

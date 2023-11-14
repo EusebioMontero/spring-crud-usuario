@@ -1,7 +1,7 @@
-package com.emc.springcrudusuario.service;
+package com.forestales.geforex.security;
 
-import com.emc.springcrudusuario.security.UserDetailImpl;
-import com.emc.springcrudusuario.entities.UserEntity;
+import com.forestales.geforex.entities.UserEntity;
+import com.forestales.geforex.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,7 +14,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     UserService userService;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserEntity user = userService.getByUserName(username).get();
+
+        UserEntity user = userService.getByUserLogin(username).get();
+        System.out.println(UserDetailImpl.build(user));
         return UserDetailImpl.build(user);
     }
 }

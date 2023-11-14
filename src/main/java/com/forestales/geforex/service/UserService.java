@@ -1,7 +1,7 @@
-package com.emc.springcrudusuario.service;
+package com.forestales.geforex.service;
 
-import com.emc.springcrudusuario.entities.UserEntity;
-import com.emc.springcrudusuario.repositories.I_UserRepository;
+import com.forestales.geforex.entities.UserEntity;
+import com.forestales.geforex.repositories.I_UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

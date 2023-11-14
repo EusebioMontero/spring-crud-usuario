@@ -1,7 +1,7 @@
-package com.emc.springcrudusuario.security;
+package com.forestales.geforex.security;
 
-import com.emc.springcrudusuario.security.jwt.JwtEntryPoint;
-import com.emc.springcrudusuario.security.jwt.JwtTokenFilter;
+import com.forestales.geforex.security.jwt.JwtEntryPoint;
+import com.forestales.geforex.security.jwt.JwtTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,7 +36,9 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/crud-user/user", "/crud-user/users").permitAll()
+                .antMatchers("/crud-user/user"
+//                        ,"/crud-user/users"
+                ).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
@@ -46,4 +48,5 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 jwtTokenFilter(),
                 UsernamePasswordAuthenticationFilter.class);
     }
+
 }

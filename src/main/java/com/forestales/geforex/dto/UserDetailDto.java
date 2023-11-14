@@ -1,6 +1,6 @@
-package com.emc.springcrudusuario.dto;
+package com.forestales.geforex.dto;
 
-import com.emc.springcrudusuario.enums.E_UserAuthority;
+import com.forestales.geforex.enums.E_UserAuthority;
 import lombok.*;
 
 import javax.validation.constraints.Email;

@@ -1,8 +1,8 @@
-package com.emc.springcrudusuario.entities;
+package com.forestales.geforex.entities;
 
-import com.emc.springcrudusuario.dto.UserDetailDto;
-import com.emc.springcrudusuario.dto.UserDto;
-import com.emc.springcrudusuario.enums.E_UserAuthority;
+import com.forestales.geforex.dto.UserDetailDto;
+import com.forestales.geforex.dto.UserDto;
+import com.forestales.geforex.enums.E_UserAuthority;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

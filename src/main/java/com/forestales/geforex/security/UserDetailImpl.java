@@ -1,6 +1,6 @@
-package com.emc.springcrudusuario.security;
+package com.forestales.geforex.security;
 
-import com.emc.springcrudusuario.entities.UserEntity;
+import com.forestales.geforex.entities.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
